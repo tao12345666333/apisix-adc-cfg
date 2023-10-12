@@ -1,0 +1,18 @@
+name: "Example configuration"
+version: "1.0.0"
+services:
+  - name: httpbin-service
+    hosts:
+      - api7.ai
+    upstream:
+      name: httpbin
+      nodes:
+        - host: httpbin.org
+          port: 80
+          weight: 1
+routes:
+  - name: httpbin-route-anything
+    service_id: httpbin-service
+    uri: "/anything"
+    methods:
+      - GET
