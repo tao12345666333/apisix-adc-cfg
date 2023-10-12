@@ -16,8 +16,3 @@ routes:
     uri: "/anything"
     methods:
       - GET
-  - name: httpbin-route-ip
-    service_id: httpbin-service
-    uri: "/ip"
-    methods:
-      - GET
